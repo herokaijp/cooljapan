@@ -3,9 +3,11 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sass'
 gem 'coffee-script'
+gem 'thin'
 
 group :development do
   gem 'heroku'
+  gem 'foreman'
 end
 
 group :development, :test do
