@@ -11,4 +11,6 @@ end
 group :development, :test do
   gem 'rspec'
   gem 'rack-test'
+  gem 'execjs'
+  gem 'therubyracer'
 end
