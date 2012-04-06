@@ -4,6 +4,10 @@ gem 'sinatra-contrib'
 gem 'sass'
 gem 'coffee-script'
 gem 'thin'
+gem 'pusher'
+gem "tweetstream"
+gem "clockwork"
+gem "yajl-ruby"
 
 group :development do
   gem 'heroku'
