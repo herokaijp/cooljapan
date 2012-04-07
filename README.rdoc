@@ -1,6 +1,8 @@
 = .env
 
  RACK_ENV=development
+ FB_APP_ID=xxxx
+ FB_APP_SECRET=xxxx
 
 = start
 
