@@ -16,3 +16,7 @@ group :development, :test do
   gem 'execjs'
   gem 'therubyracer'
 end
+
+group :production do
+  gem 'newrelic_rpm'
+end

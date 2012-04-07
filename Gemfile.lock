@@ -25,6 +25,7 @@ GEM
     mime-types (1.18)
     multi_json (1.2.0)
     netrc (0.7.1)
+    newrelic_rpm (3.3.3)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -70,6 +71,7 @@ DEPENDENCIES
   execjs
   foreman
   heroku
+  newrelic_rpm
   rack-test
   rspec
   sass
