@@ -1,0 +1,7 @@
+= .env
+
+ RACK_ENV=development
+
+= start
+
+ foreman start
