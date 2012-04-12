@@ -27,4 +27,8 @@ get '/js/application.js' do
   coffee erb(:"application.coffee", :layout => false)
 end
 
+not_found do
+  erb :not_found
+end
+
 use Rack::Static, :urls => ["/images"], :root => "public"
