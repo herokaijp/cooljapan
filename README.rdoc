@@ -12,6 +12,14 @@
  NEW_RELIC_ID=xxxx
  NEW_RELIC_LICENSE_KEY=xxxx
  NEW_RELIC_LOG=stdout
+ TWITTER_CONSUMER_KEY=xxxx
+ TWITTER_CONSUMER_SECRET=xxxx
+ TWITTER_OAUTH_TOKEN=xxxx
+ TWITTER_OAUTH_TOKEN_SECRET=xxxx
+ TWITTER_KEYWORD=xxxx
+ PUSHER_APP_ID=xxxx
+ PUSHER_KEY=xxxx
+ PUSHER_SECRET=xxxx
  PATH=bin:vendor/bundle/ruby/1.9.1/bin:/usr/local/bin:/usr/bin:/bin
  PUSHER_SOCKET_URL=xxxx
  PUSHER_URL=xxxx

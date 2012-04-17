@@ -15,4 +15,8 @@ body {
     left: 50%;
     margin: -100px auto auto -200px;
   }
+  ul#tweets {
+    position: relative;
+    z-index: 1;
+  }
 }
