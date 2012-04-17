@@ -31,4 +31,14 @@ not_found do
   erb :not_found
 end
 
+helpers do
+    def pusher_api_key
+    if ENV["RACK_ENV"] == "development" 
+      ENV["PUSHER_KEY"]
+    else
+      URI.parse(ENV["PUSHER_URL"]).user
+    end
+  end
+end
+
 use Rack::Static, :urls => ["/images"], :root => "public"

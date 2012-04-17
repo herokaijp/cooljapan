@@ -21,8 +21,6 @@
  PUSHER_KEY=xxxx
  PUSHER_SECRET=xxxx
  PATH=bin:vendor/bundle/ruby/1.9.1/bin:/usr/local/bin:/usr/bin:/bin
- PUSHER_SOCKET_URL=xxxx
- PUSHER_URL=xxxx
  RACK_ENV=staging|production
  RUBY_VERSION=ruby-1.9.3-p125
 

@@ -42,7 +42,7 @@
   </script>
   <script>
     $(window).ready(function() {
-      var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>');
+      var pusher = new Pusher('<%= pusher_api_key %>');
       var channel = pusher.subscribe('tweets');
 
       channel.bind('tweet', function(tweet) {
