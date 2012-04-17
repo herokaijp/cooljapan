@@ -1,4 +1,13 @@
+$basic_margin: 15px;
 body {
+  ul.sns {
+    >li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-left: $basic_margin;
+      }
+    }
+  }
   img#title {
     position: absolute;
     top: 50%;
