@@ -3,6 +3,7 @@ body {
   ul.sns {
     >li {
       display: inline-block;
+      vertical-align: middle;
       &:not(:last-child) {
         margin-left: $basic_margin;
       }
