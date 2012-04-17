@@ -1,16 +1,23 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'rake'
-require 'rspec/core/rake_task'
-
-task :default => :spec
-
-desc "Run all specs in spec directory"
-RSpec::Core::RakeTask.new(:spec)
 require "rubygems"
 require "bundler/setup"
 require "pusher"
 require "tweetstream"
+
+if ENV["RACK_ENV"] == "development"
+  require 'rspec/core/rake_task'
+   
+  task :default => :spec
+  
+  desc "Run all specs in spec directory"
+  RSpec::Core::RakeTask.new(:spec)
+
+  Pusher.app_id = ENV["PUSHER_APP_ID"]
+  Pusher.key = ENV["PUSHER_KEY"]
+  Pusher.secret = ENV["PUSHER_SECRET"]
+end
 
 STDOUT.sync = true
 
@@ -21,12 +28,6 @@ TweetStream.configure do |config|
   config.oauth_token_secret = ENV["TWITTER_OAUTH_TOKEN_SECRET"]
   config.auth_method = :oauth
   config.parser   = :yajl
-end
-
-if ENV["RACK_ENV"] == "development"
-  Pusher.app_id = ENV["PUSHER_APP_ID"]
-  Pusher.key = ENV["PUSHER_KEY"]
-  Pusher.secret = ENV["PUSHER_SECRET"]
 end
 
 task "jobs:work" do

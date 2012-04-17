@@ -10,6 +10,7 @@ gem "tweetstream", "1.1.3"
 gem "clockwork"
 gem "yajl-ruby"
 gem "rake"
+gem "rspec"
 
 group :development do
   gem 'heroku'
@@ -17,7 +18,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec'
   gem 'rack-test'
   gem 'execjs'
   gem 'therubyracer'
