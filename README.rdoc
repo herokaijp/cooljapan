@@ -3,6 +3,20 @@
  RACK_ENV=development
  FB_APP_ID=xxxx
  FB_APP_SECRET=xxxx
+ BASIC_AUTH_PASSWORD=xxxx
+ BASIC_AUTH_USERNAME=xxxx
+ FB_ADMINS=1259119031,1451978555
+ GEM_PATH=vendor/bundle/ruby/1.9.1
+ LANG=en_US.UTF-8
+ NEW_RELIC_APP_NAM=cooljapan-staging|cooljapan
+ NEW_RELIC_ID=xxxx
+ NEW_RELIC_LICENSE_KEY=xxxx
+ NEW_RELIC_LOG=stdout
+ PATH=bin:vendor/bundle/ruby/1.9.1/bin:/usr/local/bin:/usr/bin:/bin
+ PUSHER_SOCKET_URL=xxxx
+ PUSHER_URL=xxxx
+ RACK_ENV=staging|production
+ RUBY_VERSION=ruby-1.9.3-p125
 
 = start
 
