@@ -40,7 +40,7 @@
   })();
 
   </script>
-  <script>
+  <script type="text/javascript">
     $(window).ready(function() {
       var pusher = new Pusher('<%= pusher_api_key %>');
       var channel = pusher.subscribe('tweets');
