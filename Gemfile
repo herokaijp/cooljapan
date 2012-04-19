@@ -5,8 +5,7 @@ gem 'sass'
 gem 'coffee-script'
 gem 'thin'
 gem 'pusher'
-gem "tweetstream", "1.1.3"
-# TODO: at 1.1.4 raise error "undefined method `default_engine' for MultiJson:Module"
+gem "tweetstream"
 gem "clockwork"
 gem "yajl-ruby"
 gem "rake"
