@@ -32,12 +32,8 @@ not_found do
 end
 
 helpers do
-    def pusher_api_key
-    if ENV["RACK_ENV"] == "development" 
-      ENV["PUSHER_KEY"]
-    else
-      URI.parse(ENV["PUSHER_URL"]).user
-    end
+  def pusher_api_key
+    ENV["RACK_ENV"] == "development" ? ENV["PUSHER_KEY"] : URI.parse(ENV["PUSHER_URL"]).user
   end
 end
 
