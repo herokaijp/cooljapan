@@ -1,22 +1,39 @@
-= .env
+= Cool Japan Project
 
+= Development
+
+To contribute Cool-Japan project, You'll need:
+
+* twitter app. you can create from https://dev.twitter.com/apps/new
+* Facebook app. you can create from https://developers.facebook.com/apps
+* Pusher account. you can create from http://pusher.com/
+
+You can use all of them for free.
+
+= Getting started
+
+You have to set all these environments otherwise `foreman start` won't start correctly.
+
+ FB_APP_ID=XXX
+ FB_APP_SECRET=XXX
+ FB_ADMINS=111,222
+ TWITTER_CONSUMER_KEY=XXX
+ TWITTER_CONSUMER_SECRET=XXX
+ TWITTER_OAUTH_TOKEN=XXX
+ TWITTER_OAUTH_TOKEN_SECRET=XXX
+ TWITTER_KEYWORD="xxxx, xxxx"
+ PUSHER_APP_ID=XXX
+ PUSHER_KEY=XXX
+ PUSHER_SECRET=XXX
  RACK_ENV=development
- FB_APP_ID=xxxx
- FB_APP_SECRET=xxxx
  BASIC_AUTH_PASSWORD=xxxx
  BASIC_AUTH_USERNAME=xxxx
- FB_ADMINS=1259119031,1451978555
  GEM_PATH=vendor/bundle/ruby/1.9.1
  LANG=en_US.UTF-8
  NEW_RELIC_APP_NAM=cooljapan-staging|cooljapan
  NEW_RELIC_ID=xxxx
  NEW_RELIC_LICENSE_KEY=xxxx
  NEW_RELIC_LOG=stdout
- TWITTER_CONSUMER_KEY=xxxx
- TWITTER_CONSUMER_SECRET=xxxx
- TWITTER_OAUTH_TOKEN=xxxx
- TWITTER_OAUTH_TOKEN_SECRET=xxxx
- TWITTER_KEYWORD="xxxx, xxxx"
  PUSHER_APP_ID=xxxx
  PUSHER_KEY=xxxx
  PUSHER_SECRET=xxxx
@@ -24,10 +41,19 @@
  RACK_ENV=staging|production
  RUBY_VERSION=ruby-1.9.3-p125
 
-= start
+
+if both works fine, start the entire app with this command:
 
  foreman start
 
-= Special thanks
- Christopher Stolt
- https://github.com/stolt45/pusher-demo
+If you don't see any errors, you can start hacking! If you see something like `process terminated`, try these 2 commands.
+
+ bundle exec thin -p $PORT -e $RACK_ENV start
+
+Then make sure the background process can start fine.
+
+ bundle exec rake jobs:work
+
+= Special Thanks
+
+* @stolt45 for the pusher-demo app.
