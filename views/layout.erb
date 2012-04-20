@@ -52,7 +52,6 @@
         $('#tweets').prepend(template);
       });
       channel.bind('title', function(title) {
-        //alert(title);
         $('h1').html("Tweets about " + title);
       });
     });
@@ -60,7 +59,9 @@
   <script id="tweet-template" type="text/html">
     <li class="tweet">
       <img width="48" height="48" src="{{PROFILE_IMAGE}}"/>
+      <div class="content">
       {{TEXT}}
+      </div>
     </li>
   </script>
 </head>

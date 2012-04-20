@@ -1,6 +1,7 @@
 $ ->
   init = ->
     # write initial code after load fbAsyncInit
+    listen_twitter()
     return
 
   # load facebook javascript sdk
@@ -22,4 +23,14 @@ $ ->
     js.src = "//connect.facebook.net/en_US/all.js"
     ref.parentNode.insertBefore js, ref
   ) document
+
+  listen_twitter = ->
+    $('ul#tweets>li').live 'hover', (e) ->
+      div = $(@).find('div.content')
+      if e.type == 'mouseenter'
+        div.addClass 'hover'
+      else if e.type == 'mouseleave'
+        div.removeClass 'hover'
+      return
+    return
   return
