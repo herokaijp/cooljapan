@@ -1,18 +1,14 @@
 = Cool Japan Project
 
-= Development
+== Development
 
 To contribute Cool-Japan project, You'll need:
 
 * twitter app. you can create from https://dev.twitter.com/apps/new
 * Facebook app. you can create from https://developers.facebook.com/apps
-* Pusher account. you can create from http://pusher.com/
+* Pusher account. you can create from http://pusher.com
 
-You can use all of them for free.
-
-= Getting started
-
-You have to set all these environments otherwise `foreman start` won't start correctly.
+You can use all of them for free. Next, you have to set all these environments otherwise (({foreman start})) won't start correctly.
 
  FB_APP_ID=XXX
  FB_APP_SECRET=XXX
@@ -25,11 +21,11 @@ You have to set all these environments otherwise `foreman start` won't start cor
  PUSHER_KEY=XXX
  PUSHER_SECRET=XXX
 
-if both works fine, start the entire app with this command:
+Then start the entire app with this command:
 
  foreman start
 
-If you don't see any errors, you can start hacking! If you see something like `process terminated`, try these 2 commands.
+If you don't see any errors, you can start hacking! If you see something like (({process terminated})), try these 2 commands.
 
  bundle exec thin -p $PORT -e $RACK_ENV start
 
@@ -37,6 +33,6 @@ Then make sure the background process can start fine.
 
  bundle exec rake jobs:work
 
-= Special Thanks
+== Special Thanks
 
 * @stolt45 for the pusher-demo app.
