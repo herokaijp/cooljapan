@@ -3,6 +3,11 @@ require 'sinatra'
 require 'sass'
 require 'coffee_script'
 
+configure :development do
+  require 'newrelic_rpm'
+  require 'new_relic/rack/developer_mode'
+  use NewRelic::Rack::DeveloperMode
+end
 
 configure :staging do
   use Rack::Auth::Basic do |username, password|
