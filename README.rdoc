@@ -27,3 +27,8 @@
 = start
 
  foreman start
+
+ = Special thanks
+
+ Christopher Stolt
+ https://github.com/stolt45/pusher-demo
