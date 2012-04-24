@@ -22,21 +22,10 @@ You can use all of them for free. Next, you have to set all these environments o
  PUSHER_KEY=XXX
  PUSHER_SECRET=XXX
  RACK_ENV=development
- BASIC_AUTH_PASSWORD=xxxx
- BASIC_AUTH_USERNAME=xxxx
- GEM_PATH=vendor/bundle/ruby/1.9.1
- LANG=en_US.UTF-8
  NEW_RELIC_APP_NAM=cooljapan-staging|cooljapan
  NEW_RELIC_ID=xxxx
  NEW_RELIC_LICENSE_KEY=xxxx
  NEW_RELIC_LOG=stdout
- PUSHER_APP_ID=xxxx
- PUSHER_KEY=xxxx
- PUSHER_SECRET=xxxx
- PATH=bin:vendor/bundle/ruby/1.9.1/bin:/usr/local/bin:/usr/bin:/bin
- RACK_ENV=staging|production
- RUBY_VERSION=ruby-1.9.3-p125
-
 
 Then start the entire app with this command:
 
