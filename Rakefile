@@ -32,7 +32,7 @@ end
 
 task "jobs:work" do
   Pusher['tweets'].trigger('title', ENV["TWITTER_KEYWORD"])
-  TweetStream::Client.new.track(ENV["TWITTER_KEYWORD"]) do |status|
+  TweetStream::Client.new.track(ENV["TWITTER_KEYWORD"].split(",").each {|s| s.strip!}) do |status|
     puts "%s: %s" % [ status[:user][:screen_name], status[:text] ]
     Pusher['tweets'].trigger('tweet', status)
   end
