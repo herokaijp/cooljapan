@@ -25,6 +25,48 @@ $ ->
   ) document
 
   listen_twitter = ->
+    pusher = new Pusher("<%= pusher_api_key %>")
+    channel = pusher.subscribe('tweets')
+
+    channel.bind 'tweet', (tweet)->
+      w = $(window).width()
+      h = $(window).height()
+      x = Math.floor((w / 2) * Math.random()) + 'px'
+      y = Math.floor((h / 2) * Math.random()) + 'px'
+
+      ul = $("#tweets")
+      li = $("<li/>")
+        .addClass("tweet")
+        .css({
+          "msTransform": "translate(" + x + ", " + y + ")"
+          "MozTransform": "translate(" + x + ", " + y + ")"
+          "WebkitTransform": "translate(" + x + ", " + y + ")"
+          "OTransform": "translate(" + x + ", " + y + ")"
+        })
+
+      img = $("<img/>").attr({
+        "width": "48",
+        "height": "48",
+        "src": tweet.user.profile_image_url
+      })
+
+      text = $("<div/>")
+        .addClass("content")
+        .text(tweet.text)
+        
+      li.append(img)
+      li.append(text)
+
+      ul.prepend(li)
+
+      if $(".tweet").length > 1000
+        $("#tweets>li:last").remove()
+        delete $("#tweets>li:last")
+      return
+      
+    channel.bind 'title', (title)->
+      $('h1').html("Tweets about " + title)
+        
     $('ul#tweets>li').live 'hover', (e) ->
       div = $(@).find('div.content')
       if e.type == 'mouseenter'
