@@ -1,20 +1,25 @@
 $basic_margin: 15px;
 body {
-  ul.sns {
-    >li {
-      display: inline-block;
-      vertical-align: middle;
-      &:not(:last-child) {
-        margin-left: $basic_margin;
-      }
-    }
-  }
-  img#title {
+  section#logo {
     position: fixed;
     top: 50%;
     left: 50%;
-    margin: -100px auto auto -200px;
+    margin: -67px auto auto -175px;
     z-index: 20;
+    ul.sns {
+      padding: 0;
+      >li {
+        display: inline-block;
+        vertical-align: middle;
+        &:not(:last-child) {
+          margin-left: $basic_margin;
+        }
+      }
+    }
+    img#title {
+      width: 350px;
+      height: 134px;
+    }
   }
   h1 {
     margin: $basic_margin;
