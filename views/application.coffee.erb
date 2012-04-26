@@ -29,10 +29,10 @@ $ ->
     channel = pusher.subscribe('tweets')
 
     channel.bind 'tweet', (tweet)->
-      w = $(window).width()
-      h = $(window).height()
-      x = Math.floor((w / 2) * Math.random()) + 'px'
-      y = Math.floor((h / 2) * Math.random()) + 'px'
+      w = $("body").width()
+      h = $("body").height()
+      x = Math.floor(w * Math.random()) + 'px'
+      y = Math.floor(h * Math.random()) + 'px'
 
       ul = $("#tweets")
       li = $("<li/>")
