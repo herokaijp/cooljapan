@@ -1,5 +1,12 @@
 $basic_margin: 15px;
 body {
+  max-width: 600px;
+  @media only screen and (max-device-width:480px) and (orientation:portrait) {
+    max-width: 320px;
+  }
+  @media only screen and (max-device-width:480px) and (orientation:landscape) {
+    max-width: 480px;
+  }
   section#logo {
     position: fixed;
     top: 50%;
@@ -8,6 +15,7 @@ body {
     z-index: 20;
     ul.sns {
       padding: 0;
+      text-align: center;
       >li {
         display: inline-block;
         vertical-align: middle;
@@ -21,6 +29,11 @@ body {
       height: 134px;
       display: block;
       margin: 0 auto;
+      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        -moz-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        -o-transform: scale(0.8);
+      }
     }
   }
   h1 {
